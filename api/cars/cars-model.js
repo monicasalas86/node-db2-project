@@ -5,8 +5,9 @@ const getAll = () => {
   return result
 }
 
-const getById = () => {
-  // DO YOUR MAGIC
+const getById = (id) => {
+  const result = db('cars').where('car_id', id).first()
+  return result
 }
 
 const create = () => {
