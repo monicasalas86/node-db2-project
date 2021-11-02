@@ -10,8 +10,9 @@ const getById = (id) => {
   return result
 }
 
-const create = () => {
-  // DO YOUR MAGIC
+const create = async (newCar) => {
+  const [id] = await db('cars').insert(newCar)
+  return getById(id)
 }
 
 module.exports = {
